@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLIPONI 2026 - BALI</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #fff8ef;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .shadow-pop {
+      box-shadow: 12px 12px 0 #000;
+    }
+
+    .floating {
+      animation: floating 4s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 18s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .glow {
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #ff0;
+      }
+      to {
+        box-shadow: 0 0 30px #ff0080;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-lg border-b-4 border-black">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-5">
+    <div class="text-3xl font-black">POLIPONI 2026</div>
+
+    <div class="hidden md:flex gap-8 text-lg font-bold">
+      <a href="#about">About</a>
+      <a href="#lineup">Lineup</a>
+      <a href="#ticket">Ticket</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <a href="#ticket" class="bg-black text-white px-6 py-3 rounded-full font-black hover:scale-110 transition">
+      BUY TICKET
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="min-h-screen grid-bg relative overflow-hidden flex items-center pt-32">
+
+  <div class="absolute top-10 left-10 w-44 h-44 bg-pink-500 rounded-full blur-3xl opacity-50"></div>
+  <div class="absolute bottom-10 right-10 w-52 h-52 bg-yellow-400 rounded-full blur-3xl opacity-50"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+
+    <div>
+      <div class="bg-green-400 inline-block px-6 py-3 text-xl font-black shadow-pop mb-6 rotate-[-2deg]">
+        FESTIVAL MUSIK TERBESAR DI BALI
+      </div>
+
+      <h1 class="text-7xl lg:text-9xl font-black leading-none mb-6">
+        POLIPONI
+      </h1>
+
+      <div class="bg-orange-500 inline-block px-8 py-4 text-4xl font-black shadow-pop rotate-[1deg] mb-8">
+        04 JULI 2026
+      </div>
+
+      <p class="text-2xl font-bold mb-8 max-w-2xl">
+        Rasakan pengalaman festival musik paling spektakuler di Bali bersama artis terbaik Indonesia dengan panggung immersive dan visual futuristik.
+      </p>
+
+      <div class="flex flex-wrap gap-5">
+        <a href="#ticket" class="bg-black text-white px-10 py-5 rounded-full text-2xl font-black hover:scale-110 transition glow">
+          BELI TIKET
+        </a>
+
+        <a href="#lineup" class="border-4 border-black px-10 py-5 rounded-full text-2xl font-black hover:bg-black hover:text-white transition">
+          LIHAT LINEUP
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="bg-cyan-400 p-6 rounded-[40px] shadow-pop floating rotate-[-3deg]">
+        <img src="image1.jpg" class="rounded-[30px] w-full h-[600px] object-cover">
+      </div>
+
+      <div class="absolute -bottom-10 -left-10 bg-yellow-300 px-8 py-5 shadow-pop text-2xl font-black rotate-[5deg]">
+        SHEILA ON 7
+      </div>
+
+      <div class="absolute top-10 -right-10 bg-pink-500 text-white px-8 py-5 shadow-pop text-2xl font-black rotate-[-8deg]">
+        LIVE EXPERIENCE
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RUNNING TEXT -->
+<section class="bg-black text-white py-4 text-3xl font-black marquee">
+  <span>POLIPONI 2026 • BALI UNITED TRAINING CENTER • FESTIVAL MUSIK • LIVE PERFORMANCE • PREMIUM EXPERIENCE •</span>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-32 px-6">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <div>
+      <div class="bg-yellow-300 inline-block px-6 py-3 text-2xl font-black shadow-pop mb-8">
+        ABOUT FESTIVAL
+      </div>
+
+      <h2 class="text-6xl font-black mb-8 leading-tight">
+        Festival Musik Paling Hype Tahun 2026
+      </h2>
+
+      <p class="text-2xl leading-relaxed font-medium mb-8">
+        POLIPONI menghadirkan pengalaman konser modern dengan lighting spektakuler, immersive stage, food bazaar, art installation, dan line up artis papan atas Indonesia.
+      </p>
+
+      <div class="grid grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-3xl shadow-pop border-4 border-black">
+          <div class="text-5xl font-black">20K+</div>
+          <div class="text-xl font-bold">Audience</div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl shadow-pop border-4 border-black">
+          <div class="text-5xl font-black">15+</div>
+          <div class="text-xl font-bold">Artists</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="image2.jpg"
+        class="rounded-[40px] shadow-pop border-4 border-black">
+    </div>
+  </div>
+</section>
+
+<!-- LINEUP -->
+<section id="lineup" class="py-32 bg-black text-white px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-20">
+      <div class="bg-pink-500 inline-block px-6 py-3 text-2xl font-black shadow-pop mb-8 text-black">
+        OFFICIAL LINEUP
+      </div>
+
+      <h2 class="text-7xl font-black">MAIN STAGE</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div class="bg-yellow-300 text-black p-8 rounded-[30px] shadow-pop hover:scale-105 transition">
+        <div class="text-4xl font-black mb-4">SHEILA ON 7</div>
+        <div class="text-xl font-bold">Special Performance</div>
+      </div>
+
+      <div class="bg-cyan-400 text-black p-8 rounded-[30px] shadow-pop hover:scale-105 transition">
+        <div class="text-4xl font-black mb-4">HINDIA</div>
+        <div class="text-xl font-bold">Live Session</div>
+      </div>
+
+      <div class="bg-orange-500 text-black p-8 rounded-[30px] shadow-pop hover:scale-105 transition">
+        <div class="text-4xl font-black mb-4">JUICY LUICY</div>
+        <div class="text-xl font-bold">Festival Set</div>
+      </div>
+
+      <div class="bg-green-400 text-black p-8 rounded-[30px] shadow-pop hover:scale-105 transition">
+        <div class="text-4xl font-black mb-4">PAMUNGKAS</div>
+        <div class="text-xl font-bold">Headline Show</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TICKET -->
+<section id="ticket" class="py-32 px-6 grid-bg">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-20">
+      <div class="bg-green-400 inline-block px-6 py-3 text-2xl font-black shadow-pop mb-8">
+        TICKET CATEGORY
+      </div>
+
+      <h2 class="text-7xl font-black">PILIH TIKETMU</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-10">
+
+      <div class="bg-white p-10 rounded-[40px] border-4 border-black shadow-pop hover:-translate-y-4 transition">
+        <div class="text-5xl font-black mb-6">FAST TRACK</div>
+        <div class="text-3xl font-black mb-2">BUNDLING 6 ORANG</div>
+        <div class="text-7xl font-black mb-8">3.510JT</div>
+
+        <div class="inline-block bg-green-400 px-5 py-2 rounded-full text-xl font-black mb-6 border-4 border-black">
+          ON SALE
+        </div>
+
+        <ul class="space-y-4 text-xl font-bold mb-10">
+          <li>✔ Fast Track Entrance</li>
+          <li>✔ Front Festival Area</li>
+          <li>✔ Exclusive Merchandise</li>
+        </ul>
+
+        <button class="w-full bg-black text-white py-5 rounded-full text-2xl font-black hover:scale-105 transition">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="bg-yellow-300 p-10 rounded-[40px] border-4 border-black shadow-pop hover:-translate-y-4 transition scale-105 relative">
+
+        <div class="absolute -top-5 right-5 bg-red-500 text-white px-6 py-2 rounded-full font-black">
+          BEST SELLER
+        </div>
+
+        <div class="text-5xl font-black mb-6">PREMIUM</div>
+        <div class="text-3xl font-black mb-2">BUNDLING 6 ORANG</div>
+        <div class="text-7xl font-black mb-8">2.510JT</div>
+
+        <div class="inline-block bg-green-400 px-5 py-2 rounded-full text-xl font-black mb-6 border-4 border-black">
+          ON SALE
+        </div>
+
+        <ul class="space-y-4 text-xl font-bold mb-10">
+          <li>✔ Premium Area</li>
+          <li>✔ Fast Queue Access</li>
+          <li>✔ Merchandise Bundle</li>
+          <li>✔ Premium Toilet</li>
+        </ul>
+
+        <button class="w-full bg-black text-white py-5 rounded-full text-2xl font-black hover:scale-105 transition">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="bg-white p-10 rounded-[40px] border-4 border-black shadow-pop hover:-translate-y-4 transition">
+        <div class="text-5xl font-black mb-6">FESTIVAL</div>
+        <div class="text-3xl font-black mb-2">BUNDLING 6 ORANG</div>
+        <div class="text-7xl font-black mb-8">1.510JT</div>
+
+        <div class="inline-block bg-red-500 text-white px-5 py-2 rounded-full text-xl font-black mb-6 border-4 border-black">
+          SOLD OUT
+        </div>
+
+        <ul class="space-y-4 text-xl font-bold mb-10 opacity-70">
+          <li>✔ Festival Area</li>
+          <li>✔ General Access</li>
+          <li>✔ Food Bazaar</li>
+        </ul>
+
+        <button disabled class="w-full bg-gray-400 text-white py-5 rounded-full text-2xl font-black cursor-not-allowed opacity-60">
+          SOLD OUT
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="py-32 bg-orange-500 text-black px-6">
+  <div class="max-w-6xl mx-auto text-center">
+
+    <div class="text-7xl font-black mb-10">COUNTDOWN TO FESTIVAL</div>
+
+    <div id="countdown" class="grid grid-cols-2 lg:grid-cols-4 gap-8"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-32 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="text-center mb-20">
+      <div class="bg-cyan-400 inline-block px-6 py-3 text-2xl font-black shadow-pop mb-8">
+        FAQ
+      </div>
+
+      <h2 class="text-7xl font-black">PERTANYAAN UMUM</h2>
+    </div>
+
+    <div class="space-y-8">
+
+      <div class="bg-white border-4 border-black rounded-[30px] p-8 shadow-pop">
+        <div class="text-3xl font-black mb-4">Bagaimana cara membeli tiket?</div>
+        <p class="text-xl font-medium">Klik tombol BUY NOW lalu lanjutkan pembayaran menggunakan metode pembayaran yang tersedia.</p>
+      </div>
+
+      <div class="bg-white border-4 border-black rounded-[30px] p-8 shadow-pop">
+        <div class="text-3xl font-black mb-4">Apakah tiket bisa refund?</div>
+        <p class="text-xl font-medium">Tiket yang sudah dibeli tidak dapat dikembalikan kecuali event dibatalkan.</p>
+      </div>
+
+      <div class="bg-white border-4 border-black rounded-[30px] p-8 shadow-pop">
+        <div class="text-3xl font-black mb-4">Apakah tersedia parkir?</div>
+        <p class="text-xl font-medium">Ya, area parkir tersedia di venue dengan kapasitas terbatas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white py-20 px-6">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10">
+
+    <div>
+      <div class="text-5xl font-black mb-6">POLIPONI</div>
+      <p class="text-xl leading-relaxed text-gray-300">
+        Festival musik modern terbesar di Bali menghadirkan pengalaman hiburan futuristik dan immersive.
+      </p>
+    </div>
+
+    <div>
+      <div class="text-3xl font-black mb-6">LOCATION</div>
+      <p class="text-xl text-gray-300">
+        Bali United Training Center<br>
+        Kabupaten Gianyar, Bali
+      </p>
+    </div>
+
+    <div>
+      <div class="text-3xl font-black mb-6">FOLLOW US</div>
+
+      <div class="flex gap-5 text-xl font-bold">
+        <div>Instagram</div>
+        <div>TikTok</div>
+        <div>YouTube</div>
+      </div>
+
+      <div class="mt-8 text-gray-400 text-lg">
+        © 2026 POLIPONI FESTIVAL • ALL RIGHTS RESERVED
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from("h1", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5
+  });
+
+  gsap.utils.toArray("section").forEach(section => {
+    gsap.from(section.children, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%"
+      },
+      y: 80,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2
+    });
+  });
+
+  // COUNTDOWN
+  const targetDate = new Date("July 4, 2026 14:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = `
+      <div class="bg-white p-10 rounded-[30px] shadow-pop border-4 border-black">
+        <div class="text-7xl font-black">${days}</div>
+        <div class="text-2xl font-bold">DAYS</div>
+      </div>
+
+      <div class="bg-white p-10 rounded-[30px] shadow-pop border-4 border-black">
+        <div class="text-7xl font-black">${hours}</div>
+        <div class="text-2xl font-bold">HOURS</div>
+      </div>
+
+      <div class="bg-white p-10 rounded-[30px] shadow-pop border-4 border-black">
+        <div class="text-7xl font-black">${minutes}</div>
+        <div class="text-2xl font-bold">MINUTES</div>
+      </div>
+
+      <div class="bg-white p-10 rounded-[30px] shadow-pop border-4 border-black">
+        <div class="text-7xl font-black">${seconds}</div>
+        <div class="text-2xl font-bold">SECONDS</div>
+      </div>
+    `;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+</body>
+</html>
